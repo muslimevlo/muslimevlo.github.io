@@ -1,6 +1,6 @@
 @charset "UTF-8";
     @import url('https://fonts.googleapis.com/css?family=Oswald');
-    @import url(https: //fonts.googleapis.com/css?family=Open+Sans:300, 400, 600, 700);
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
     @font-face {
     font-family: roboto;
     font-style: normal;
@@ -3571,6 +3571,7 @@ to {
 [class*=" pe-7s-"], [class^=pe-7s-] {
     display: inline-block;
     font-family: Pe-icon-7-stroke;
+    speak-as: none;
     speak: none;
     font-style: normal;
     font-weight: 400;
@@ -5578,6 +5579,7 @@ to {
 }
 .owl-carousel .owl-stage {
     position: relative;
+    touch-action: pan-Y;
     -ms-touch-action: pan-Y;
 }
 .owl-carousel .owl-stage:after {
@@ -5591,17 +5593,20 @@ to {
 .owl-carousel .owl-stage-outer {
     position: relative;
     overflow: hidden;
+    transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
 }
 .owl-carousel .owl-item {
     min-height: 1px;
     float: left;
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     -webkit-touch-callout: none;
 }
 .owl-carousel .owl-item img {
     display: block;
     width: 100%;
+    transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
 }
 .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
@@ -5704,6 +5709,7 @@ to {
     background: url(owl.video.play.html) no-repeat;
     cursor: pointer;
     z-index: 1;
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transition: -webkit-transform .1s ease;
     -webkit-transition: -webkit-transform .1s ease;
@@ -5821,6 +5827,7 @@ to {
     z-index: 1043;
     position: fixed;
     outline: 0!important;
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
 .mfp-container {
@@ -6766,7 +6773,7 @@ a:focus {
     color: #435a6b;
 }
 @supports (mix-blend-mode:lighten) {
-    .wrap-container .menu li.menu__item a: focus, .wrap-container .menu li.menu__item a:hover {
+    .wrap-container .menu li.menu__item a:focus, .wrap-container .menu li.menu__item a:hover {
     display: inline-block;
     position: relative;
     color: #333;
@@ -7553,6 +7560,7 @@ a:focus {
     color: #fff;
     background: -webkit-linear-gradient(330deg, rgba(255, 255, 255, 0.67) 10%, rgba(251, 251, 253, 0.45) 25%, rgba(251, 251, 251, 0.68) 51%, rgba(255, 255, 255, 0.52) 100%);
     background: linear-gradient(330deg, rgba(255, 255, 255, 0.67) 10%, rgba(251, 251, 253, 0.45) 25%, rgba(251, 251, 251, 0.68) 51%, rgba(255, 255, 255, 0.52) 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
