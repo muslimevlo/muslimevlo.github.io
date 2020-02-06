@@ -641,6 +641,7 @@ li{
 }
 .footer__list{
   padding-top: 10px;
+  padding-left: 0;
 }
 .footer__list li{
   margin-top: 10px;

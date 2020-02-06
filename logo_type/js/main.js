@@ -4,10 +4,11 @@ $( document ).ready(function() {
         prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
         infinitie: false
     });
-    $('select').styler();
+    // $('select').styler();
 
-    $('.header__btn-menu').on('click', function(){
-    $('.menu ul').slideToggle();
+    $('.header__btn-menu').on('click', function () {
+        $('.menu ul').slideToggle();
+        console.log('clickburger');
     });
 
 });
